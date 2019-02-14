@@ -53,34 +53,26 @@ namespace Discord_Marubot_Window
 
         public void maru_crawl(List<string> old_list)
         {
-            showmeurl = settings.URL;// Config 파일에서 가져온 url
+            showmeurl = settings.URL;
             var htmlDoc = htmlWeb.Load(showmeurl+ updateurl);
 
             HtmlNodeCollection nodeCol = htmlDoc.DocumentNode.SelectNodes("//div[@class='data-container']");
-            //페이지안에잇는거 다가져오기
-
-            foreach (HtmlNode node in nodeCol)//한마리씩 뜯어봄
+            foreach (HtmlNode node in nodeCol)
             {
                 var title_tmp = node.SelectNodes(".//div[@class='subject']");
                 title = title_tmp[0].InnerText.Replace("\n", "|").Split('|')[1].Trim();
-                //제목가져오는애
-
                 var domain_tmp = node.SelectNodes(".//a");
                 domain = showmeurl + domain_tmp[0].Attributes["href"].Value;
-                //주소가져오는애
 
 
                 alllist.Add(new maru(title, domain));
-                //일단 갖다넣음
-
-                if (!old_list.Contains(domain))//크롤 이전 리스트에 이도메인 없으면 넣음
+                if (!old_list.Contains(domain))
                     marumaru.Add(new maru(title, domain));
-
             }
         }
         
 
-        public void maru_img(string url)//머함했을때 이미지 갖고오는건데 요즘안씀
+        public void maru_img(string url)
         {
             var htmlDoc = htmlWeb.Load(url);
             HtmlNodeCollection nodeCol = htmlDoc.DocumentNode.SelectNodes("//div[@class='ctt_box']//img[@src]");
