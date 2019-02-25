@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Discord_Marubot_Window.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="BotToken" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Mzg3NTE5MTc1MTU0NzI4OTYw.DQfp5A.cEwMWB5S2WiJUM8UZwfZwT9lDp4</Value>
-    </Setting>
     <Setting Name="TestToken" Type="System.String" Scope="User">
       <Value Profile="(Default)">Mzg3OTI2Nzg0NzY0ODA1MTMw.DyXAPQ.8MjI42GbRIF19Y45Tcs_sl6NLxI</Value>
     </Setting>
@@ -13,6 +10,9 @@
     </Setting>
     <Setting Name="URL" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://mangashow2.me</Value>
+    </Setting>
+    <Setting Name="BotToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

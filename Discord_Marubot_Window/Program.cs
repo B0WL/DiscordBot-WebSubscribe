@@ -181,7 +181,6 @@ namespace Discord_Marubot_Window
                         wf.WinformLog("@타이틀 배치 실패");
                     }
 
-                    wf.WinformOld(new_title, new_domain);
 
                     maru.Reverse();
                     for (int i = 0; i < maru.Count; i++)
@@ -232,8 +231,10 @@ namespace Discord_Marubot_Window
                         }
                     }
                     ////////////크롤종료후
+                    wf.WinformOld(new_title, new_domain);
                     DB.setold(new_title, new_domain);
                     DB.setoldlist(crawl.getalllist());
+                    DB.filesave();
 
                     #endregion
 

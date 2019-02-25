@@ -59,6 +59,8 @@ namespace Discord_Marubot_Window
             HtmlNodeCollection nodeCol = htmlDoc.DocumentNode.SelectNodes("//div[@class='data-container']");
             //페이지안에잇는거 다가져오기
 
+            alllist.Clear();//이전 한페이지 리스트
+
             foreach (HtmlNode node in nodeCol)//한마리씩 뜯어봄
             {
                 var title_tmp = node.SelectNodes(".//div[@class='subject']");

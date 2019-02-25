@@ -25,18 +25,6 @@ namespace Discord_Marubot_Window.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Mzg3NTE5MTc1MTU0NzI4OTYw.DQfp5A.cEwMWB5S2WiJUM8UZwfZwT9lDp4")]
-        public string BotToken {
-            get {
-                return ((string)(this["BotToken"]));
-            }
-            set {
-                this["BotToken"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Mzg3OTI2Nzg0NzY0ODA1MTMw.DyXAPQ.8MjI42GbRIF19Y45Tcs_sl6NLxI")]
         public string TestToken {
             get {
@@ -68,6 +56,18 @@ namespace Discord_Marubot_Window.Properties {
             }
             set {
                 this["URL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string BotToken {
+            get {
+                return ((string)(this["BotToken"]));
+            }
+            set {
+                this["BotToken"] = value;
             }
         }
     }
