@@ -68,7 +68,7 @@ namespace Discord_Marubot_Window
                 //제목가져오는애
 
                 var domain_tmp = node.SelectNodes(".//a");
-                domain = showmeurl + domain_tmp[0].Attributes["href"].Value;
+                domain = domain_tmp[0].Attributes["href"].Value;
                 //주소가져오는애
 
 

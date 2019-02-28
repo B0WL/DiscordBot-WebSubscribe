@@ -6,6 +6,7 @@ using System.Net;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 
@@ -349,10 +350,8 @@ namespace Discord_Marubot_Window
                         Crawl_HAP crawler = new Crawl_HAP();
                         WebClient client = new WebClient();
 
-                        string txt = "";
-                        txt += wf.WinformGetOld();
-
-                        await context.Channel.SendMessageAsync(txt);
+                        await context.Channel.SendMessageAsync("", false, wf.WinformGetOld());
+                    
                         #endregion
                         break;
                 }

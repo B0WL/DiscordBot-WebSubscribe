@@ -164,13 +164,12 @@ namespace Discord_Marubot_Window
                     }
 
 
-                    string new_title = maru[0].gettitle();
-                    string new_domain = maru[0].getdomain();
+                    string new_title=maru[0].gettitle();
+                    string new_domain= maru[0].getdomain();
 
 
                     ulong tmp_server;
                     ulong tmp_user;
-
 
                     try
                     {
@@ -182,15 +181,22 @@ namespace Discord_Marubot_Window
                     }
 
 
+
+
+
+
                     maru.Reverse();
                     for (int i = 0; i < maru.Count; i++)
                     {
                         if (maru[i].gettitle() == old_title)
                             break;
 
+                        new_title = maru[i].gettitle();
+                        new_domain = maru[i].getdomain();
+
                         for (int j = 0; j < list.Count(); j++)
                         {
-                            if (maru[i].gettitle().Contains(list[j]))
+                            if (new_title.Contains(list[j]))
                             {
                                 tmp_server = Convert.ToUInt64(server[j]);
                                 tmp_user = Convert.ToUInt64(user[j]);
@@ -205,13 +211,14 @@ namespace Discord_Marubot_Window
                                     {
                                         try
                                         {
+
                                             SendDM(discordclient
                                                 .GetChannel(tmp_server)
                                                 .GetUser(tmp_user),
-                                                    maru[i].gettitle() , maru[i].getdomain());
+                                                    new_title, Properties.Settings.Default.URL + new_domain);
 
 
-                                            wf.WinformLog("@"+ discordclient.GetUser(tmp_user)+"가 "+ maru[i].gettitle()+"를 받음\n");
+                                            wf.WinformLog("@"+ discordclient.GetUser(tmp_user)+"가 "+ new_title + "를 받음\n");
                                         }
                                         catch {
                                             wf.WinformLog("@메세지 전송 실패\n");
@@ -231,7 +238,8 @@ namespace Discord_Marubot_Window
                         }
                     }
                     ////////////크롤종료후
-                    wf.WinformOld(new_title, new_domain);
+
+                    wf.WinformOld(new_title, Properties.Settings.Default.URL + new_domain);
                     DB.setold(new_title, new_domain);
                     DB.setoldlist(crawl.getalllist());
                     DB.filesave();

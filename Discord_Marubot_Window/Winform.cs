@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Discord;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -120,16 +121,18 @@ namespace Discord_Marubot_Window
                 form.domainbox.AppendText(domain);
             }
         }
-        public string WinformGetOld()
+        public EmbedBuilder WinformGetOld()
         {
-            string txt = "";
+            EmbedBuilder builder =new EmbedBuilder();
 
 
-            //txt += form.titlebox.Text+ "\r\n" +form.domainbox.Text + "\r\n"+ "이거봄";
-            txt += form.domainbox.Text;
+            builder.WithTitle(form.titlebox.Text);
+            builder.WithDescription(form.domainbox.Text);
+            
+            //txt += form.domainbox.Text;
 
 
-            return txt;
+            return builder;
 
         }
 
