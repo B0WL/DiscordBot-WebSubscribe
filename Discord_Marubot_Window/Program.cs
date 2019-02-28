@@ -36,7 +36,7 @@ namespace Discord_Marubot_Window
         static Thread worker;
         unsafe public static bool tgl_crawl;
         static int loading;
-        
+
 
 
         [STAThread]
@@ -159,13 +159,13 @@ namespace Discord_Marubot_Window
                         {
                             wf.WinformLog("@타이틀 배치 실패");
                         }
-                        
+
                         continue;
                     }
 
 
-                    string new_title=maru[0].gettitle();
-                    string new_domain= maru[0].getdomain();
+                    string new_title = maru[0].gettitle();
+                    string new_domain = maru[0].getdomain();
 
 
                     ulong tmp_server;
@@ -202,11 +202,11 @@ namespace Discord_Marubot_Window
                                 tmp_user = Convert.ToUInt64(user[j]);
 
 
-                                
+
                                 if (discordclient.GetChannel(tmp_server) != null &&
                                     discordclient.GetChannel(tmp_server).GetUser(tmp_user) != null)
                                 {
-                                    int fail=0;//성공
+                                    int fail = 0;//성공
                                     do
                                     {
                                         try
@@ -218,9 +218,10 @@ namespace Discord_Marubot_Window
                                                     new_title, Properties.Settings.Default.URL + new_domain);
 
 
-                                            wf.WinformLog("@"+ discordclient.GetUser(tmp_user)+"가 "+ new_title + "를 받음\n");
+                                            wf.WinformLog("@" + discordclient.GetUser(tmp_user) + "가 " + new_title + "를 받음\n");
                                         }
-                                        catch {
+                                        catch
+                                        {
                                             wf.WinformLog("@메세지 전송 실패\n");
                                             fail++;
                                         }
@@ -231,7 +232,7 @@ namespace Discord_Marubot_Window
 
 
                                     } while (0 < fail && fail < 10);//1~최대10회 실패동안 반복
-                                    
+
                                     Thread.Sleep(1000);
                                 }
                             }
@@ -260,7 +261,7 @@ namespace Discord_Marubot_Window
                 builder.WithDescription(domain);
 
                 await (await u.GetOrCreateDMChannelAsync())
-                    .SendMessageAsync("",false,builder);
+                    .SendMessageAsync("", false, builder);
             }
             catch
             {

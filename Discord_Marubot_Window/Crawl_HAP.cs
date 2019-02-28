@@ -60,6 +60,7 @@ namespace Discord_Marubot_Window
             //페이지안에잇는거 다가져오기
 
             alllist.Clear();//이전 한페이지 리스트
+            marumaru.Clear();
 
             foreach (HtmlNode node in nodeCol)//한마리씩 뜯어봄
             {
