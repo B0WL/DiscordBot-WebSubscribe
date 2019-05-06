@@ -350,8 +350,8 @@ namespace Discord_Marubot_Window
                         Crawl_HAP crawler = new Crawl_HAP();
                         WebClient client = new WebClient();
 
-                        await context.Channel.SendMessageAsync("", false, wf.WinformGetOld());
-                    
+                        //await context.Channel.SendMessageAsync("", false, wf.WinformGetOld());
+                        await context.Channel.SendMessageAsync(wf.WinformGetOldString());
                         #endregion
                         break;
                 }

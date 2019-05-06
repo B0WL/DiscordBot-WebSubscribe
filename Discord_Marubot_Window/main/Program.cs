@@ -82,10 +82,8 @@ namespace Discord_Marubot_Window
             //worker = new Thread(new ThreadStart(crawling));
             worker = new Thread(new ThreadStart(crawler3));
             worker.Start();
-
+            
             wf.WinformLog("@여기까지");
-
-
 
 
             Application.Run(form);
@@ -121,7 +119,7 @@ namespace Discord_Marubot_Window
             {
 
                 progress();
-                Thread.Sleep(60000);
+                Thread.Sleep(10000);
 
                 if (tgl_crawl)
                 {
@@ -135,7 +133,12 @@ namespace Discord_Marubot_Window
 
                     try
                     {
-                        crawl.maru_crawl(old_list);
+                        //crawl.maru_crawl(old_list);
+
+                        if (form.cb.Checked)
+                            crawl.direct_crwal(old_list, form);
+                        else
+                            crawl.maru_crawl(old_list); 
                     }
                     catch
                     {

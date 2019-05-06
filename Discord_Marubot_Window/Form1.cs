@@ -4,6 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,7 +15,7 @@ using System.Windows.Forms;
 namespace Discord_Marubot_Window
 {
 
-    public partial class Form1 : Form 
+    public partial class Form1 : Form
     {
         public TextBox Log;
         public ProgressBar Pgb;
@@ -20,6 +23,8 @@ namespace Discord_Marubot_Window
         public TextBox domainbox;
         public TextBox titlebox;
         public ListBox perm;
+        public WebBrowser wb;
+        public CheckBox cb;
 
         data Database;
 
@@ -37,6 +42,10 @@ namespace Discord_Marubot_Window
             domainbox = tb_domain;
             titlebox = tb_title;
             perm = list_perm;
+            /*
+            wb = this.webBrowser1;
+            cb = this.checkBox1;
+            */
 
 
 
@@ -79,5 +88,25 @@ namespace Discord_Marubot_Window
         {
             Database = DB;
         }
+
+        /*
+        string showmeurl = "https://manamoa.net";
+        string updateurl = "/bbs/board.php?bo_table=manga";
+        Properties.Settings settings = Properties.Settings.Default;
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            showmeurl = settings.URL;// Config 파일에서 가져온 url
+            webBrowser1.Navigate(showmeurl);
+        }
+
+
+
+        public string innerhtml;
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            innerhtml = webBrowser1.Document.Body.InnerHtml;
+        }*/
+
     }
 }

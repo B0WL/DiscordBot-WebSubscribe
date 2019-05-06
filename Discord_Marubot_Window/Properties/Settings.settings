@@ -9,10 +9,13 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="URL" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://mangashow2.me</Value>
+      <Value Profile="(Default)">https://manamoa.net</Value>
     </Setting>
     <Setting Name="BotToken" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UpdateURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/bbs/board.php?bo_table=manga</Value>
     </Setting>
   </Settings>
 </SettingsFile>

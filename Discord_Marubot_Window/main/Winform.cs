@@ -136,6 +136,14 @@ namespace Discord_Marubot_Window
 
         }
 
+        public String WinformGetOldString()
+        {
+            String txt = "";
+            txt += Properties.Settings.Default.URL;
+            txt += form.domainbox.Text;
+            return txt;
+        }
+
 
         public void WinformProg(data DataBase)
         {

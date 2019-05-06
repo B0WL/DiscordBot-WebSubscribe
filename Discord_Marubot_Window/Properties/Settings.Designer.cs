@@ -49,7 +49,7 @@ namespace Discord_Marubot_Window.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://mangashow2.me")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://manamoa.net")]
         public string URL {
             get {
                 return ((string)(this["URL"]));
@@ -68,6 +68,18 @@ namespace Discord_Marubot_Window.Properties {
             }
             set {
                 this["BotToken"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/bbs/board.php?bo_table=manga")]
+        public string UpdateURL {
+            get {
+                return ((string)(this["UpdateURL"]));
+            }
+            set {
+                this["UpdateURL"] = value;
             }
         }
     }
