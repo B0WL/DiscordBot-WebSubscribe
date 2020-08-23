@@ -1,0 +1,15 @@
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\bin\Debug\CrawlBot.exe.config
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\bin\Debug\CrawlBot.exe
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\bin\Debug\CrawlBot.pdb
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot.csprojAssemblyReference.cache
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\MainWindow.g.cs
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\App.g.cs
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot_MarkupCompile.cache
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot_MarkupCompile.lref
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\MainWindow.baml
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot.g.resources
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot.Properties.Resources.resources
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot.csproj.GenerateResource.cache
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot.csproj.CoreCompileInputs.cache
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot.exe
+C:\Users\kji\Documents\Work\CrawlBot\CrawlBot\obj\Debug\CrawlBot.pdb
