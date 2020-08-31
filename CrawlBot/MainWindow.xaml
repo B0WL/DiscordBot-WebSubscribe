@@ -23,7 +23,7 @@
 
 
             <TabControl Grid.Column="1" Grid.RowSpan="2">
-                <TabItem Header="User">
+                <TabItem Header="Manga">
                     <Grid Background="#FFE5E5E5">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="0.5*"/>
@@ -33,24 +33,10 @@
 
                         <Label Content="Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                         <Label Content="ID" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="23"/>
-                        <ListView Grid.Row="1" Margin="0,30,0,0">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                        <ListView Grid.Row="2" Margin="0,30,0,0" >
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                        <Label Content="To Crawl" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
-                        <Label Content="To Serve" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2"/>
+                        <Label Content="Subscribe User" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1"/>
                         <TextBox HorizontalAlignment="Right" Height="23" Margin="0,14,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
                         <TextBox HorizontalAlignment="Right" Height="23" Margin="0,45,10,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+                        <ListBox Margin="0,32,0,0" Grid.Row="1" Grid.RowSpan="2"/>
 
                     </Grid>
                 </TabItem>
